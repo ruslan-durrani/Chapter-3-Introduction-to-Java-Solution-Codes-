@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+        int count = 0;
+        int correct = 0;
+        while (count<4){
+            int num1 = random.nextInt(11);
+            int num2 = random.nextInt(11);
+            System.out.print("\nWhat is "+num1+" and "+num2+" = ");
+            int answer = input.nextInt();
+            System.out.print(num1+" + "+num2+" is "+answer+" "+ (num1+num2==answer));
+            if (num1 + num2 == answer){
+                count += 1;
+                correct += 1;
+            }
+
+        }
+        if(correct>2){
+            System.out.println("\nCorrect answers: "+correct);
+        }
+    }
+}
