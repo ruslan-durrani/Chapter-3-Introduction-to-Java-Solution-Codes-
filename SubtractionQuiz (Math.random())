@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int count = 0;
+        int correct = 0;
+        int num1 = 0 , num2 = 0;
+        while (count != 4) {
+            int n1 = (int) (Math.random() * 10);
+            int n2 = (int) (Math.random() * 11);
+            if (n1<n2){
+                num1 = n2;
+                num2 = n1;
+            }
+            System.out.printf("What is %d - %d = ",num1,num2);
+            int answer = input.nextInt();
+            if (num1-num2 == answer) {
+                System.out.println(num1 + "-" + num2 + "=" + answer + " is " + (num1 - num2 == answer));
+                correct +=1;
+            }
+            else
+                System.out.println(num1 + "-" + num2 +"="+ answer +" is "+ (num1-num2 == answer));
+            //counter
+            count += 1;
+        }
+        if (correct>2){
+            System.out.println("Correct answers: "+correct);
+        }
+
+    }
+}
