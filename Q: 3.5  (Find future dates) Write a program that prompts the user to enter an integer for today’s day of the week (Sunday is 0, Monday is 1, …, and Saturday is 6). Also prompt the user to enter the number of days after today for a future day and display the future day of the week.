@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Mani {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter today's day: ");
+        int today = input.nextInt();
+        String todayString = "";
+        switch (today) {
+            case 0 -> todayString = "Sunday";
+            case 1 -> todayString = "Monday";
+            case 2 -> todayString = "Tuesday";
+            case 3 -> todayString = "Wednesday";
+            case 4 -> todayString = "Thursday";
+            case 5 -> todayString = "Friday";
+            case 6 -> todayString = "Saturday";
+        }
+        System.out.print("Enter the number of days elapsed since today: ");
+        int futurDay = input.nextInt();
+        futurDay = (today + futurDay)%7;
+        String futurDayString = "";
+        switch (futurDay) {
+            case 0 -> futurDayString = "Sunday";
+            case 1 -> futurDayString = "Monday";
+            case 2 -> futurDayString = "Tuesday";
+            case 3 -> futurDayString = "Wednesday";
+            case 4 -> futurDayString = "Thursday";
+            case 5 -> futurDayString = "Friday";
+            case 6 -> futurDayString = "Saturday";
+        }
+        System.out.printf("Today is %s and the future day is %s",todayString,futurDayString);
+    }
+}
