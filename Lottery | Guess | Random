@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main{
+public class Practice{
     public static void main(String[] args) {
         Scanner input  = new Scanner(System.in);
         // Generate a lottery number
@@ -23,5 +23,6 @@ public class Main{
             System.out.println("Match one digit: you win $1,000");
         else
             System.out.println("Sorry, no match");
+        System.out.println("The Lottery number is : "+lotteryNum);
     }
 }
