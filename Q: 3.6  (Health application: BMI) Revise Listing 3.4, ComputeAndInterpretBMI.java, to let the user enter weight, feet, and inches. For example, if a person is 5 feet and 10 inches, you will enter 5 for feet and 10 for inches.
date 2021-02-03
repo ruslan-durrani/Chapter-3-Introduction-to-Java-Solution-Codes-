@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        //Body Mass Index Computations
+        Scanner input  = new Scanner(System.in);
+        //Constants
+        final double poundToKilos = 0.453592;
+        final double inchesToMeters = 0.0254;
+        final double feetToMeters = 0.3048;
+
+        //Imput Weight in pounds
+        System.out.print("Enter your weight (pound) : ");
+        double weight = input.nextDouble();
+
+        //Input height in feets
+        System.out.print("Enter your feets : ");
+        double feets = input.nextDouble();
+
+        //Input height in inches
+        System.out.print("Enter your feets : ");
+        double inches = input.nextDouble();
+
+        // conversion of pounds to kilograms
+        double weightInKilograms = weight * poundToKilos;
+
+        // comversion of inches to meters
+        double heightInMeters = (inches* inchesToMeters) + (feets * feetToMeters );
+
+        // BMI formula
+        double bmi = weightInKilograms / (heightInMeters * heightInMeters);
+        System.out.println("You Body Mass Index is: "+bmi);
+
+        // BMI Interpretations
+        if (bmi < 18.5d)
+            System.out.println("-> Underweight");
+        else if (bmi >= 18.5  && bmi< 25.0d)
+            System.out.println("-> Normal");
+        else if (bmi >= 25.0 && bmi < 30.0)
+            System.out.println("-> Overweight");
+        else if (bmi >= 30d)
+            System.out.println("-> Obese");
+
+    }
+}
