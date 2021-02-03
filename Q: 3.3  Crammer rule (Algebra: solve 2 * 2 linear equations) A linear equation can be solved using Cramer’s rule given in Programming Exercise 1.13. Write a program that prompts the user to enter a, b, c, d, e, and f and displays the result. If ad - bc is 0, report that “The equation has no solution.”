@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Practice {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        //Input a,b,c,d,e,f
+        System.out.print("Enter a, b, c, d, e, f: ");
+        double a = input.nextDouble();
+        double b = input.nextDouble();
+        double c = input.nextDouble();
+        double d = input.nextDouble();
+        double e = input.nextDouble();
+        double f = input.nextDouble();
+        
+        //Determinent
+        double determinent = a*d - b*c;
+        
+        
+        if (determinent == 0)
+            System.out.println("The equation has no solution");
+        else {
+            //Matrix Display
+            System.out.printf("Matrix:**************\n%.2f\t%.2f : %.2f\n%.2f\t%.2f : %.2f\n       **************",a,b,e,c,d,f);
+            //x
+            double x_ = (e*d - f*b)/determinent;
+            //y
+            double y_ = (a*f - c*e)/determinent;
+            System.out.println("\nx is : "+x_+"\ny is : "+y_);
+        }
+    }
+}
