@@ -9,7 +9,7 @@ public class Main {
         while (count<4){
             int num1 = random.nextInt(11);
             int num2 = random.nextInt(11);
-            System.out.print("\nWhat is "+num1+" and "+num2+" = ");
+            System.out.print("\nWhat is "+num1+" + "+num2+" = ");
             int answer = input.nextInt();
             System.out.print(num1+" + "+num2+" is "+answer+" "+ (num1+num2==answer));
             if (num1 + num2 == answer){
