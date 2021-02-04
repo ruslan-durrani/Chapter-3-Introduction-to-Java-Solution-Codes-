@@ -1,0 +1,30 @@
+import java.util.Random;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+        //Generating Random number
+        int hat_tale = 1 + random.nextInt(2);
+        //Options
+        System.out.println("1: Hats\n2: Tales");
+        //User Input
+        System.out.print("Enter your guess: ");
+        int number = input.nextInt();
+        //Switch casings
+        switch (number){
+            case 1: if (hat_tale == 1){
+                System.out.println("Right Guess\nIts Hats");
+            }
+            else
+                System.out.println("Wrong Guess\nIts Tales");
+            break;
+            case 2 : if (hat_tale == 2){
+                System.out.println("Right Guess\nIts Tales");
+            }
+            else
+                System.out.println("Wrong Guess\nIts Hats");
+            break;
+        }
+    }
+}
