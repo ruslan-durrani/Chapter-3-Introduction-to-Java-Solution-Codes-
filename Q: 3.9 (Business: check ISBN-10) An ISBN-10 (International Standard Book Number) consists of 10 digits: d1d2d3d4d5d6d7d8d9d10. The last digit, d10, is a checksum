@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the first 9 digits of an ISBN as integer: ");
+        int isbn = input.nextInt();
+        int displayIsbn = isbn;
+        
+        //Fetching numbers 
+        int d9 = isbn % 10; //Last number
+        isbn /= 10;
+        int d8 = isbn % 10;
+        isbn /= 10;
+        int d7 = isbn % 10;
+        isbn /= 10;
+        int d6 = isbn % 10;
+        isbn /= 10;
+        int d5 = isbn % 10;
+        isbn /= 10;
+        int d4 = isbn % 10;
+        isbn /= 10;
+        int d3 = isbn % 10;
+        isbn /= 10;
+        int d2 = isbn % 10;
+        isbn /= 10;
+        int d1 = isbn; // First number
+        
+        //Formulae for calculating last number for ISBN
+        int lastNum = (d1  + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 +
+                d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11;
+        if (lastNum != 10)
+            System.out.printf("%d%d%d",0,displayIsbn,lastNum);
+        else
+            System.out.printf("%d%d%s",0,displayIsbn,"X");
+    }
+}
