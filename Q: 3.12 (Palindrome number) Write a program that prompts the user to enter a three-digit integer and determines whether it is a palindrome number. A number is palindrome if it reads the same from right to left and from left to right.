@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter three digit integer: ");
+        int number = input.nextInt();
+        int lastNum = number % 10;
+        int firstNum = number / 100;
+        if (lastNum == firstNum)
+            System.out.println(number + " is a palindrome");
+        else
+            System.out.println(number + " is not a palindrome");
+
+    }
+}
