@@ -1,0 +1,51 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Main{
+    public static void main(String[] args) {
+        Random random = new Random();
+        //Generating Random Number
+        int compGuess = 1+ random.nextInt(3);
+        Scanner input = new Scanner(System.in);
+        System.out.println("****************| Rock | Paper | Scissor |****************");
+        //Taking Input from User
+        System.out.print("1: Rock\n2: Paper\n2: Scissor\nEnter your Choice:");
+        int userGuess = input.nextInt();
+        //------------Switch Statement----------------------------------------
+        switch (userGuess){
+            //Case 1 checking
+            case 1 : if (compGuess==2){
+                System.out.println("You Lose\nComputer Paper | You Rock\nPaper can Wrap rock");
+            }
+            else if (compGuess == 3){
+                System.out.println("You win\nComputer Scissor | You Rock \nRock can smash Scissor");
+            }
+            else
+                System.out.println("Its a Draw ");
+            break;
+            //Case 2 checking
+            case 2 : if (compGuess==3){
+                System.out.println("You Lose\nComputer Scissor | You Paper\nScissor can cut Paper");
+            }
+            else if (compGuess == 1){
+                System.out.println("You win\nComputer rock | You Paper \nPaper can wrap Rock");
+            }
+            else
+                System.out.println("Its a Draw ");
+            break;
+            //Case 3 checking
+            case 3 : if (compGuess == 2){
+                System.out.println("You Win\nComputer Paper | You Scissor\nScissor can cut Paper");
+            }
+            else if (compGuess == 1){
+                System.out.println("You Lose\nComputer rock | You Scissor \nRock can smash Scissor");
+            }
+            else
+                System.out.println("Its a Draw ");
+            break;
+            //Default 
+            default:
+                System.out.println("Wrong Input");
+                break;
+        }
+    }
+}
